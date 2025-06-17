@@ -1,2 +1,3 @@
-# bowling_kata
-Bowling Game Kata
+# Bowling Game Kata
+
+Coming soon
