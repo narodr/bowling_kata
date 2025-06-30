@@ -80,6 +80,12 @@ En Windows (PowerShell):
 uv pip install pytest
 ```
 
+## Ejecutar tests
+
+```shell
+python -m pytest
+```
+
 ## Objetivos
 
 - Practicar TDD de forma disciplinada.
