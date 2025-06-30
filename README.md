@@ -13,11 +13,11 @@ La kata consiste en implementar una clase `Game` que simula una partida de bolos
 
 - El juego consta de 10 rondas (frames).
 - En cada ronda, el jugador tiene hasta dos lanzamientos para derribar 10 bolos (pins).
-- Si derriba los 10 bolos en el primer lanzamiento, se llama **strike**.
 - Si derriba los 10 bolos en dos lanzamientos, se llama **spare**.
+- Si derriba los 10 bolos en el primer lanzamiento, se llama **strike**. La ronda termina con un lanzamiento.
 - Los bonus:
+- - Un **spare** otorga como bonus el siguiente lanzamiento.
   - Un **strike** otorga como bonus la suma de los dos siguientes lanzamientos.
-  - Un **spare** otorga como bonus el siguiente lanzamiento.
 - En la décima ronda, si el jugador hace un strike o spare, tiene lanzamientos adicionales para completar el bonus.
 Sin embargo, no se pueden hacer más de 3 lanzamientos en esta última ronda.
 
