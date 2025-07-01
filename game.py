@@ -1,11 +1,16 @@
 import warnings
 
 class Game:
-    def __init__(self):
+    def __init__(self, rolls=None):
         self._rolls = []
+        if rolls is not None:
+            self.roll(rolls)
 
-    def roll(self, pins: int):
-        self._rolls.append(pins)
+    def roll(self, pins: int | list):
+        if isinstance(pins, list):
+            self._rolls.extend(pins)
+        else:
+            self._rolls.append(pins)
 
     def score(self) -> int:
         score = 0
@@ -21,7 +26,7 @@ class Game:
                 else:
                     score += self._get_score_of_frame(roll_index)
                     roll_index += 2
-            except IndexError as e:
+            except IndexError:
                 warnings.warn('Unfinished game: The score might be incomplete')
         return score
 
